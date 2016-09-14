@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?3chdhg');
+    src:    url('fonts/icomoon.eot?3chdhg#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?3chdhg') format('truetype'),
+        url('fonts/icomoon.woff?3chdhg') format('woff'),
+        url('fonts/icomoon.svg?3chdhg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-newspaper:before {
+    content: "\e904";
+}
+.icon-video:before {
+    content: "\e913";
+}
+.icon-mic:before {
+    content: "\e91e";
+}
+.icon-book:before {
+    content: "\e91f";
+}
+.icon-location:before {
+    content: "\e948";
+}
+.icon-user:before {
+    content: "\e971";
+}
+.icon-cog:before {
+    content: "\e994";
+}
+.icon-more:before {
+    content: "\ea43";
+}
+.icon-flickr:before {
+    content: "\eaa3";
+}
+

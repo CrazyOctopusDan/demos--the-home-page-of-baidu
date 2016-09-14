@@ -1,0 +1,480 @@
+/*pc显示。mobile隐藏*/
+
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+
+/*reset*/
+
+
+/**/
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    cursor: default;
+    background: url("") no-repeat;
+    background-size: cover;
+}
+
+
+/*设置容器大小*/
+
+.container {
+    position: relative;
+    min-width: 810px;
+    min-height: 600px;
+}
+
+
+/*设置头部*/
+
+header {
+    width: 100%;
+    height: 32px;
+    right: 0px;
+    top: 0px;
+    border-bottom: 1px solid #eee;
+}
+
+/*设置左侧天气盒子*/
+.weather-box{
+    float: left;
+    line-height: 32px;
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.weather-box>.w_cloud{
+    background: url("../pic/weather1.png") no-repeat;
+    position: relative;
+    top:5px;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.weather-box b{
+    color:yellowgreen;
+    margin:0 5px;
+}
+
+
+
+/*设置右侧导航栏*/
+
+nav {
+    width: 550px;
+    height: 32px;
+    float: right;
+    margin: 0 0 5px 0;
+}
+
+
+/*导航栏里面的列表样式*/
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul {
+    float: right;
+    margin: 0;
+}
+
+.li {
+    float: left;
+    list-style: none;
+    margin-left: 24px;
+    /*margin-right: 10px;*/
+    text-decoration: underline;
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.li a {
+    color: #333;
+    font-weight: bold;
+}
+
+.li a:visiter {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/*设置头部导航栏最后两个不加粗*/
+
+#login>a,
+#set>a {
+    font-weight: 100;
+    _font-weight: normal;
+}
+
+
+/*设置“更多产品”*/
+
+#morept {
+    background: #38f;
+    width: 60px;
+    padding: 0 10px;
+    line-height: 32px;
+    text-align: center;
+}
+
+#morept ul {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    display: none;
+    background-color: #eee;
+    overflow-y: auto;
+    overflow-x:hidden;
+    z-index: 2;
+}
+
+#morept:hover{
+    background-color: #eee;
+}
+
+#morept:hover a{
+    color: #333;
+}
+
+#morept:hover ul {
+    display: block;
+}
+
+#morept>a {
+    color: #fff;
+    text-decoration: none!important;
+}
+
+#morept ul li {
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #eee;
+}
+
+#morept ul li div{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+#morept ul li div img{
+    display: block;
+    width: 48px;
+    margin:0 auto;
+    cursor: pointer;
+}
+#morept ul li a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none!important;
+}
+
+#morept ul li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*头部结束*/
+
+
+/*设置主体*/
+
+.body {
+    clear: right;
+    width: 100%;
+    height: 391px;
+}
+
+
+/*设置图片居中*/
+
+.img {
+    width: 320px;
+    margin-left: calc(50% - 160px);
+    /*兼容ie6-10*/
+    left: 480px\9;
+    top: 60px\9;
+    position: absolute\9;
+}
+
+.img img {
+    width: 270px;
+    height: 129px;
+}
+
+
+/*设置搜索框区域*/
+
+.form {
+    width: 661px;
+    margin-top: 23px;
+    margin-left: calc(50% - 320px);
+    /*兼容ie6-10*/
+    top: 190px\9;
+    left: 320px\9;
+    position: absolute\9;
+    /*兼容ie6*/
+    _border-left: 1px solid #ccc;
+    font-size: 0;
+}
+
+.f_input {
+    box-sizing: border-box;
+    size: 440;
+    width: 501px;
+    height: 34px;
+    /*让光标不在框的最左端*/
+    padding-left: 8px;
+    /*IE6-10的光标居中*/
+    line-height: 34px\9;
+    border: 1px solid #b6b6b6;
+    background: #fff;
+    display: inline-block;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    outline: none;
+    font-size: 18px;
+    float: left;
+    /*兼容ie6-7*/
+    *margin-left: -3px;
+    *height: 30px;
+    *line-height: 30px;
+}
+
+.f_input:focus {
+    border: 1px solid #3385ff;
+}
+
+.micro {
+    background: #fff url("../pic/microphone.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    /*鼠标光标停留*/
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    left: -165px;
+    top: 8px;
+    *position: absolute;
+    *left: 440px;
+}
+
+.micro:hover {
+    background: #fff url("../pic/microphone1.png") no-repeat;
+    background-position: 0;
+}
+
+.div {
+    background: #ddd url("../pic/div.png") no-repeat;
+    width: 1px;
+    height: 14px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    right: 41px;
+    top: 10px;
+    /*兼容ie6-7*/
+    *left: -40px;
+    *top: 10px;
+    *position: relative;
+}
+
+.camera {
+    background: #fff url("../pic/carema1.png") no-repeat;
+    _background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    left: -150px;
+    top: 9px;
+    /*ie6-7兼容设置*/
+    *position: absolute;
+    *left: 478px;
+    _background-image: url("../pic/camera2.png") no-repeat;
+    _background-position: 0px 1px;
+}
+
+.camera:hover {
+    background-image: url("../pic/carema2.png") no-repeat;
+    background-position: 0 -20px;
+    color: #ffffff;
+}
+
+.f_submit {
+    box-sizing: border-box;
+    width: 100px;
+    height: 34px;
+    background: #3385ff;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    position: relative;
+    float: left;
+    margin-left: -1px;
+    border-bottom: 2px solid #3385ff;
+    cursor: pointer;
+    /*兼容ie*/
+    *top: -1px;
+    *right: 54px;
+    *position: absolute;
+    *height: 35px;
+}
+
+.f_submit:hover {
+    background-color: #2868c8;
+}
+
+
+/*设置中间的提示*/
+
+.tips {
+    width: 260px;
+    height: 60px;
+    margin-top: 60px;
+    margin-left: calc(50% - 130px);
+    font-size: 14px;
+    /*兼容ie6-10*/
+    left: 500px\9;
+    top: 280px\9;
+    position: absolute\9;
+}
+
+.tips a:hover {
+    color: #333;
+}
+
+.tips a {
+    color: #666;
+}
+
+
+/*设置页脚*/
+
+footer {
+    bottom: -50px;
+    position: relative;
+    width: 700px;
+    height: 60px;
+    margin-left: calc(50% - 380px);
+    /*兼容ie*/
+    left: 300px\9;
+    position: absolute\9;
+    _top: 450px;
+    _margin-bottom: 200px;
+    padding: 40px 0px 40px 70px;
+}
+
+
+/*手机百度*/
+
+.shoujibaidu {
+    float: left;
+    width: 122px;
+    height: 60px;
+    left: -20px;
+    line-height: 60px;
+    margin-right: 10px;
+}
+
+.shoujibaidu img {
+    float: left;
+    height: 60px;
+    width: 60px;
+}
+
+.shoujibaidu span {
+    font-size: 12px;
+    padding-left: 0.5em;
+}
+
+
+/*百度糯米*/
+
+.baidunuomi {
+    float: left;
+    width: 122px;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 10px;
+}
+
+.baidunuomi img {
+    float: left;
+    height: 60px;
+    width: 60px;
+}
+
+.baidunuomi span {
+    font-size: 12px;
+    padding-left: 0.5em;
+}
+
+
+/*about 百度*/
+
+.aboutbaidu {
+    float: left;
+    list-style-type: none;
+    height: 60px;
+    width: 340px;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: #AAA;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.aboutbaidu div {
+    height: 20px;
+}
+
+.l1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.l2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutbaidu a {
+    color: #AAA;
+    list-style-type: none;
+}
+
+.aboutbaidu img {
+    width: 14px;
+    height: 14px;
+}

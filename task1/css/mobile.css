@@ -1,0 +1,469 @@
+/*设置PC隐藏mobile显示*/
+.pc {
+	display: none;
+}
+
+.mobile {
+	display: block;
+}
+/*设置字体大小*/
+html {
+	font-size: 62.5%;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+header {
+	font-size: 1.5rem;
+	color: #999;
+	height: 3rem;
+	position: relative;
+	padding: 0 20px;
+}
+
+header .h_l {
+	position: absolute;
+	left: 0;
+	width: 14rem;
+	height: 3rem;
+}
+
+header .h_l span {
+	background:#eee url("../pic/weather.png") no-repeat;
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+}
+
+header .h_l h2 {
+	display: inline-block;
+	position: relative;
+	top: -1.2rem;
+	font-size: 2rem;
+}
+
+header .h_l .h_city {
+    display: inline-block;
+    position: relative;
+    top: -1rem;
+    left: -1rem;
+}
+
+header .h_l .h_city p {
+	line-height: 1;
+	margin-top: -1rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+header .h_r {
+	position: absolute;
+	right: 0;
+	height: 3rem;
+	padding-right: 1rem;
+}
+
+header .h_r i {
+	margin-left: 2rem;
+	font-size: 2.2rem;
+}
+
+header .h_r a {
+	color: #999;
+}
+/*目前手机最小也就320px，以防页面过度变形*/
+html,body {
+	min-width: 320px;
+	background-color: #eee;
+}
+
+/*搜索框*/
+.search-form {
+	/*防止盒子变形，使用怪医盒模型*/
+	box-sizing: border-box;
+	padding-left: 0 20px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.search-form img {
+	width: 17.5rem;
+	height: 8.5rem;
+	margin-bottom: 5px;
+}
+
+.search-form .search-div {
+	display: flex;
+	box-sizing: border-box;
+	position: relative;
+
+}
+
+.search-form .search-div .search-input {
+	/*搜索框大小可以变化*/
+	-webkit-flex-grow: 1; 
+	font-size: 3rem;
+	box-sizing: border-box;
+	height: 4rem;
+	padding-left: 5px;
+	border:1px solid #aaa;
+	border-right: 1px solid #38f;
+	outline: none;
+}
+
+.search-form .search-div .search-input:focus {
+	border-color: #38f;
+}
+
+.search-form .search-div .search-btn {
+	-webkit-flex-grow: 0;
+	font-size: 1.8rem;
+	min-width: 8rem;
+	width: 8rem;
+	height: 4rem;
+	border:none;
+	background-color: #38f;
+	color:#fff;
+	outline: none;
+}
+
+.search-form .search-div .search-btn:hover {
+	background-color: #1c76f3;
+}
+
+.search-form .search-div .icon-mic {
+	font-size: 3rem;
+	position: absolute;
+	right: 9rem;
+	color:#999;
+	top: 0.8rem;
+}
+/*页面导航栏*/
+.content-nav {
+	box-sizing: border-box;
+	padding:0 20px;
+}
+
+.content-nav ul {
+	display: flex;
+	padding:20px;
+	list-style: none;
+}
+
+.content-nav ul a {
+	color: #999;
+}
+
+.content-nav ul li {
+	text-align: center;
+	flex-grow: 1;
+	font-size: 1rem;
+	color: #666;
+}
+
+.content-nav ul li i {
+	display: block;
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+/*我的导航*/
+.my-nav {
+	background-color: #fff;
+	padding: 0.3rem 1rem ;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.my-nav .icon-flickr {
+	position: absolute;
+	right: 2rem;
+	height: 0px;
+}
+
+.my-nav h2 {
+	font-size: 1.8rem;
+	color: #999;
+}
+
+.my-nav ul {
+	display: flex;
+	position: relative;
+	left: -3rem;
+	list-style: none;
+	flex-flow: wrap;
+	color:#333;
+}
+
+.my-nav ul li {
+	text-align: center;
+	flex-grow: 1;
+	height: 3rem;
+	line-height: 3rem;
+	vertical-align: middle;
+	width: 25%;
+	font-size: 1.5rem;
+}
+/*实时热点*/
+.hot-nav {
+	background-color: #fff;
+	padding: 0.3rem 1rem ;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.hot-nav .icon-flickr {
+	position: absolute;
+	right: 2rem;
+	height: 0px;
+}
+
+.hot-nav h2 {
+	font-size: 1.8rem;
+	color: #999;
+}
+
+.hot-nav ul {
+	display: flex;
+	position: relative;
+	left: -3rem;
+	list-style: none;
+	flex-flow: wrap;
+}
+
+.hot-nav ul li {
+	text-align: left;
+	flex-grow: 1;
+	height: 3rem;
+	line-height: 3rem;
+	vertical-align: middle;
+	width: 50%;
+	font-size: 1.5rem;
+}
+
+.hot-nav .hot-more {
+	text-align: right;
+	margin-bottom: 1rem;
+}
+
+.hot-nav .hot-more i {
+	margin-right: 1.5rem;
+	font-size: 1.5rem;
+}
+/*推荐百度*/
+.tj-nav {
+	background-color: #fff;
+	padding: 0.3rem 1rem ;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.tj-nav .icon-flickr {
+	position: absolute;
+	right: 2rem;
+	height: 0px;
+}
+
+.tj-nav h2 {
+	font-size: 1.8rem;
+	color: #999;
+}
+
+.tj-nav ul {
+	display: flex;
+	position: relative;
+	left: -3rem;
+	list-style: none;
+	flex-flow: wrap;
+}
+
+.tj-nav ul li {
+	text-align: left;
+	flex-grow: 1;
+	height: 3rem;
+	line-height: 3rem;
+	vertical-align: middle;
+	width: 100%;
+	font-size: 1.5rem;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+
+.tj-nav ul li:nth-child(1) {
+	height: 5rem;
+}
+
+.tj-nav ul li:nth-child(1) img {
+	width: 5rem;
+	margin-bottom: 0.5rem;
+}
+
+.tj-nav ul li:nth-child(1) .tj-tj {
+	position: absolute;
+	top: 0;
+	margin-left: 1rem;
+}
+
+.tj-nav ul li:nth-child(1) .tj-sj {
+	position: absolute;
+	bottom: -0.5rem;
+	margin-left: 1rem;
+	font-size: 1rem;
+	color: #aaa;
+}
+.tj-nav ul li .time {
+	position: absolute;
+	right: 0;
+	font-size: 1rem;
+	color: #aaa;
+}
+
+.tj-nav .hot-more {
+	text-align: right;
+	margin-bottom: 1rem;
+}
+
+.tj-nav .hot-more i {
+	margin-right: 1.5rem;
+	font-size: 1.5rem;
+}
+/*生活服务导航栏*/
+.live-nav {
+	background-color: #fff;
+	padding: 0.3rem 1rem ;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.live-nav .icon-flickr {
+	position: absolute;
+	right: 2rem;
+	height: 0px;
+}
+
+.live-nav h2 {
+	font-size: 1.8rem;
+	color: #999;
+}
+
+.live-nav .live-local {
+	display: inline-block;
+	font-size: 1.4rem;
+}
+
+.live-nav button {
+	position: absolute;
+	width: 70px;
+    height: 30px;
+	right: 1.5rem;
+	border: 1px solid #d2d6dd;
+	border-radius: 2px;
+	font-size: 1.4rem;
+	background-color: #fff;
+}
+
+.live-nav ul {
+	display: flex;
+	position: relative;
+	left: -3rem;
+	list-style: none;
+	flex-flow: wrap;
+
+}
+
+.live-nav ul li {
+	text-align: center;
+	flex-grow: 1;
+	height: 6rem;
+	line-height: 3rem;
+	vertical-align: middle;
+	width: 25%;
+	font-size: 1.5rem;
+}
+
+.live-nav ul li div {
+	width: 42px;
+	height: 42px;
+	margin:0 auto;
+	line-height: 50px;
+	vertical-align: middle;
+	border-radius: 21px;
+	background-color: #b493db;
+}
+
+.live-nav ul li div i {
+	font-size:2rem;
+	color: #fff;
+}
+
+.live-nav .live-devide {
+	height: 1px;
+	background-color: #eee;
+}
+
+.live-nav .live-zk {
+	text-align: center;
+	font-size: 2rem;
+	height: 4rem;
+	line-height: 4rem;
+	vertical-align: middle;
+}
+/*管理我的卡片*/
+.manage {
+	background-color: #fff;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.manage a {
+	color: #666;
+	font-size: 1.5rem;
+}
+/*页脚*/
+footer {
+	padding: 0 2rem 1rem;
+}
+
+footer ul {
+	list-style: none;
+	margin-left: -4rem;
+}
+
+footer ul li {
+	height: 3rem;
+	line-height: 3rem;
+	vertical-align: middle;
+	position: relative;
+	font-size: 1.3rem;
+	color: #666;
+}
+
+footer ul li span {
+	background:#eee url("../pic/baiduicon.ico") no-repeat;
+	background-position: 0 2px;
+	background-size: 1.2rem;
+	width: 1.3rem;
+	height: 1.3rem;
+	display: inline-block;
+}
+
+footer .feedback {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: #666;
+	font-size: 1.5rem;
+}
+
+footer .feedback i {
+	color: #ccc;
+}
+
+footer a {
+	display: block;
+	margin-bottom: 1rem;
+	text-align: center;
+}
